@@ -48,6 +48,16 @@ closeOverlay.addEventListener("click", () => {
 
 
 function createCard({ results, total_pages }) {
+
+
+       let homePageSection = document.querySelectorAll("[parent-slider-home-page]");
+
+       console.log(homePageSection);
+
+       let home;
+
+       if (homePageSection != null) { home = "homepage" };
+
         containerResults.classList.add("active");
         let allResultsMovie = document.querySelector("[all-results-movies]");
         totalPages = total_pages;
@@ -55,7 +65,7 @@ function createCard({ results, total_pages }) {
 
         results.forEach(result => {
 
-            allResultsMovie.innerHTML += returnCards(...getArrayResult(imageBaseUrl, result));
+            allResultsMovie.innerHTML += returnCards(...getArrayResult(imageBaseUrl, result), home);
         })
 
 }
