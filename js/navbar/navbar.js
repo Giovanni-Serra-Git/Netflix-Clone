@@ -52,11 +52,9 @@ function createCard({ results, total_pages }) {
 
        let homePageSection = document.querySelectorAll("[parent-slider-home-page]");
 
-       console.log(homePageSection);
-
        let home;
 
-       if (homePageSection != null) { home = "homepage" };
+       if (homePageSection.length != 0) { home = "homepage" };
 
         containerResults.classList.add("active");
         let allResultsMovie = document.querySelector("[all-results-movies]");
