@@ -1,0 +1,50 @@
+.all-genre-movies { top: 80px }
+
+.all-results-movies__container {
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, calc(25% - 10px));
+}
+
+.all-genre-movies__container { 
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, calc(20% - 32px));
+    gap: 10px;
+    justify-content: space-between;
+}
+
+
+
+/* 1500px */
+
+@media (max-width: 93.75em) {
+    .all-results-movies__container  { 
+        grid-template-columns: repeat(auto-fit, calc(33.33% - 32px));
+    }
+} 
+
+
+/* 1000px */
+
+@media (max-width: 62.50em) {
+    .all-genre-movies__container  { grid-template-columns: repeat(auto-fit, calc(33.33% - 32px)) }
+}
+
+/* 700px */
+
+
+@media (max-width: 43.75em) { 
+    .caption { text-align: center } 
+    .all-results-movies__container  { 
+        grid-template-columns: repeat(auto-fit, calc(50% - 32px));
+    }
+}
+
+
+/* 500px */
+
+@media (max-width: 31.25em) {
+    .all-results-movies__container  { 
+        grid-template-columns: repeat(auto-fit, 100%);
+    }
+}
+

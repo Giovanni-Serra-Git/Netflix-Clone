@@ -1,0 +1,43 @@
+.language-results,
+.all-results-movies__container { top: 80px }
+
+.overlay { z-index: 2; }
+
+.all-results-movies__container { 
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, calc(20% - 32px));
+    gap: 10px;
+    justify-content: space-between;
+}
+
+/* 1500px */
+
+@media (max-width: 93.75em) {
+    .all-results-movies__container__container  { grid-template-columns: repeat(auto-fit, calc(20% - 16px)) }
+}
+
+/* 1000px */
+
+@media (max-width: 62.50em) {
+    .all-results-movies__container { 
+         grid-template-columns: repeat(auto-fit, calc(33.33% - 32px));
+    }
+}
+
+/* 700px */
+
+
+@media (max-width: 43.75em) {
+
+    .all-results-movies__container {  
+        grid-template-columns: repeat(auto-fit, calc(50% - 16px));
+    }
+}
+
+
+/* 500px */
+
+@media (max-width: 31.25em) {
+    .all-results-movies__container {  grid-template-columns: repeat(auto-fit, 100%)  }
+}
+

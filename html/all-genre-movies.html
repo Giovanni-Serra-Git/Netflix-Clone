@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media-queries.css">
+    <link rel="stylesheet" href="../css/all-genre-movies.css">
+    <link rel="shortcut icon" href="#">
+    <script type="module" src="../js/navbar/navbar.js" defer></script>
+    <script type="module" src="../js/app/api.js" defer></script>
+    <script type="module" src="../js/app/global.js" defer></script>
+    <script type="module" src="../js/app/all-genres-movies.js" defer></script>
+    <script type="module" src="../js/slider/slider.js" defer></script>
+
+</head> 
+<body> 
+    <nav class="theme-navbar  fixed">
+        <div class="container">
+            <div class="navbar flex flex-align-center flex-between" navbar>
+                <div>
+                    <a class="logo theme-logo fs-400 fw-bold uppercase" href="../index.html">netflix</a>
+                </div>
+                <div class="flex flex-center">
+                    <div class="search-icon__container">
+                        <img src="../assets/navbar/search.png"  class="search-icon__image pointer" alt="Search Movies Icon" search-icon>
+                    </div>
+                    <div class="hamburger-menu__container">
+                        <div class="navbar-menu__trigger">
+                            <div class="hamburger-menu flex flex-center">
+                                <i class="hamburger-menu-open fa fa-bars fa-2x hamburger-menu-fa-bars pointer" hamburger-menu-open></i>
+                                <i class="hamburger-menu-close fa fa-times fa-2x hamburger-menu-fa-times pointer" hamburger-menu-close></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="input-search-movies flex flex-align-center" search-movies>
+                <input type="text" placeholder=" search any movie" input-search>
+                <i class="input-search-close fa fa-times fa-2x hamburger-menu-fa-times pointer" input-search-close></i>
+            </div>
+        </div>
+    </nav>
+    <div class="overlay flex flex-column theme-color-white " overlay>
+        <ul class="overlay-list__genre-movies flex flex-column" genre-movies>
+            <li class="fs-200 caption">Genres</li>
+            <!-- Generate Content With JS -->
+        </ul>
+        <ul class="overlay-list__languages flex flex-column" id="languagesListDiv" languages>
+            <li class="fs-200 caption">Languages</li>
+        </ul>
+    </div>
+    <div class="container container-results" container-results>
+        <div class="all-results-movie relative theme-color-white">
+            <p class="fs-500 fw-bold capitalize theme-color-secondary" result-title-movie></p>
+            <div class="all-results-movies__container grid"  all-results-movies>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <section>
+        <div class="container">
+            <div class="all-genre-movies relative theme-color-white">
+                <p class="genre fs-500 fw-bold capitalize" genre-movie></p>
+                <div class="all-genre-movies__container grid"  all-genre-movies> 
+        
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App Demo</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media-queries.css"> 
+    <link rel="stylesheet" href="../css/details-movie.css">
+    <link rel="stylesheet" href="../css/all-results-movies.css">
+    <link rel="shortcut icon" href="#">
+    <script type="module" src="../js/navbar/navbar.js" defer></script>
+    <script type="module" src="../js/app/api.js" defer></script>
+    <script type="module" src="../js/app/global.js" defer></script>
+    <script type="module" src="../js/app/index.js" defer></script>
+    <script type="module" src="../js/slider/slider.js" defer></script>
+</head>
+<body> 
+
+    <nav class="theme-navbar  fixed">
+        <div class="container">
+            <div class="navbar flex flex-align-center flex-between" navbar>
+                <div>
+                    <a class="logo theme-logo fs-400 fw-bold uppercase" href="index.html">netflix</a>
+                </div>
+                <div class="flex flex-center">
+                    <div class="search-icon__container">
+                        <img src="../assets/navbar/search.png"  class="search-icon__image pointer" alt="Search Movies Icon" search-icon>
+                    </div>
+                    <div class="hamburger-menu__container">
+                        <div class="navbar-menu__trigger">
+                            <div class="hamburger-menu flex flex-center">
+                                <i class="hamburger-menu-open fa fa-bars fa-2x hamburger-menu-fa-bars pointer" hamburger-menu-open></i>
+                                <i class="hamburger-menu-close fa fa-times fa-2x hamburger-menu-fa-times pointer" hamburger-menu-close></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="input-search-movies flex flex-align-center" search-movies>
+                <input type="text" placeholder=" search any movie" input-search>
+                <i class="input-search-close fa fa-times fa-2x hamburger-menu-fa-times pointer" input-search-close></i>
+            </div>
+        </div>
+    </nav>
+    <div class="overlay flex flex-column theme-color-white " overlay>
+        <ul class="overlay-list__genre-movies flex flex-column" genre-movies>
+            <li class="fs-200 caption">Genres</li>
+            <!-- Generate Content With JS -->
+        </ul>
+        <ul class="overlay-list__languages flex flex-column" id="languagesListDiv" languages>
+            <li class="fs-200 caption">Languages</li>
+        </ul>
+    </div>
+    <div class="container container-results" container-results>
+        <div class="all-results-movie relative theme-color-white">
+            <p class="fs-500 fw-bold capitalize theme-color-secondary" result-title-movie></p>
+            <div class="all-results-movies__container grid"  all-results-movies>
+                
+            </div>
+        </div>
+    </div>
+
+    <section class="slider-section relative">
+        <img src="https://image.tmdb.org/t/p/original//ovM06PdF3M8wvKb06i4sjW3xoww.jpg" class="poster-image" alt="Poster Image Background" poster-image>
+        <div class="container">
+            <div class="slider flex flex-center"> 
+                <div class="poster-slider flex flex-center">
+                        <div class="poster-slider__container flex flex-column flex-justify-center theme-white">
+                            <p class="poster-slider__caption fs-600 fw-bold capitalize" poster-title>avatar: the way of water</p>
+                            <div class="more-details flex flex-align-center">
+                                <p class="year fw-bold" poster-release-date>2022</p>
+                                <div class=" rating-container flex flex-center">
+                                    <img class="rating-image " src="../assets/details/star.png" alt="Star Rate">
+                                    <p class="rating-number fw-bold" poster-vote-average>8.5</p> 
+                                </div>
+                            </div>
+                            <p class="description fw-bold" poster-overview>Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.</p>
+                            <a class="button-link" href="details.html" target="_blank" button-poster>
+                                <button class="button-play flex flex-center capitalize theme-white pointer">
+                                    <img src="../assets/button/play_circle.png" class="play-circle" alt="Play Circle Icon">
+                                    <p class="fs-100 fw-bold capitalize">watch now</p>
+                                </button>
+                            </a>
+                        </div>
+                </div>
+                <div class="slider-control flex flex-column flex-center relative" parent-slider>
+                    <div class="slider-control__container overflow-hidden">
+                        <div class="slider-control__inner slider-wrapper flex relative"  slider-wrapper popular-movies>
+                            <!-- Js content here -->
+                        </div>
+                    </div>
+                    <div class="arrow-container flex flex-align-center flex-between" slider>
+                        <div class="arrow-left flex flex-center" arrow arrow-left><span class="color-theme-white">&lharu;</span></div>
+                        <div class="arrow-right flex flex-center" arrow arrow-right><span class="color-theme-white">&#8640;</span></div>
+                    </div>
+                </div>
+       
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="container meta-item-container flex flex-column">
+            <p class="fs-500 fw-bold theme-white capitalize" meta-item-movie></p>
+                 <!--  Js content here--  -->
+            </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container meta-item-container flex flex-column">
+            <p class="fs-500 fw-bold theme-white capitalize" meta-item-movie></p>
+             <!-- Js content here -->
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container meta-item-container flex flex-column">
+            <p class="fs-500 fw-bold theme-white capitalize" meta-item-movie></p>
+            <!-- Js content here -->
+            </div>
+        </div>
+    </section>
+
+ 
+   
+</body>
+</html>
