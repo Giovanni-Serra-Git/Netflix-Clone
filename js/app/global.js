@@ -74,9 +74,16 @@ export const genreMoviesList = {
     }
 }
 
-export function returnCards(imageBaseUrl,backdrop_path,poster_path,title,genre_ids,id,voteAverage,releaseDate) {
+export function returnCards(imageBaseUrl,backdrop_path,poster_path,title,genre_ids,id,voteAverage,releaseDate, homePage) {
+
+    let href;
+
+    if (homePage == "homepage") {
+        href = "html/details.html"
+    } else { href = "details.html" };
+
     return `
-    <a href="html/details.html" class="card pointer theme-white flex flex-column" meta-item-card genre-id="${genre_ids}" movie-id="${id}">
+    <a href="${href}" class="card pointer theme-white flex flex-column" meta-item-card genre-id="${genre_ids}" movie-id="${id}">
     <img src="${imageBaseUrl}${backdrop_path || poster_path}" alt="${title}">
      <p class="caption fs-100 fw-bold capitalize" meta-item-caption>${title}</p>
         <div class="more-details flex flex-align-center">
@@ -89,6 +96,8 @@ export function returnCards(imageBaseUrl,backdrop_path,poster_path,title,genre_i
     </a>
     `
 }
+
+
 
 // Slider
 

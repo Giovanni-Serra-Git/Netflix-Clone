@@ -149,7 +149,7 @@ homePageSection.forEach( (section,index) => {
 
 export function movieListHomePage( { results }, index ) {
     results.forEach(result => {
-        document.querySelectorAll("[slider-wrapper-home-page]")[index].innerHTML +=  returnCards(...getArrayResult(imageBaseUrl, result));
+        document.querySelectorAll("[slider-wrapper-home-page]")[index].innerHTML +=  returnCards(...getArrayResult(imageBaseUrl, result), "homepage");
         document.querySelectorAll("[meta-item-card]").forEach(card => {
             card.addEventListener("click", getMovieId);
         })
